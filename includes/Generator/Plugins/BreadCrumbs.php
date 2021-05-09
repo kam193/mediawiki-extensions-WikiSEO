@@ -116,10 +116,13 @@ class BreadCrumbs extends AbstractBaseGenerator implements GeneratorInterface {
 		$steps = explode( self::DELIM, $template );
 		$breadcrumbs = [];
 		foreach ( $steps as $step ) {
-			$url = Title::newFromText( trim( $step ), NS_CATEGORY )->getFullUrl();
+			$title = Title::newFromText( trim( $step ), NS_CATEGORY );
+			if ( !$title ) {
+				continue;
+			}
 			$breadcrumbs[] = [
 				"name" => trim( $step ),
-				"url" => WikiSEO::protocolizeUrl( $url, $this->outputPage->getRequest() ),
+				"url" => WikiSEO::protocolizeUrl( $title->getFullUrl(), $this->outputPage->getRequest() ),
 			];
 		}
 		return $breadcrumbs;
