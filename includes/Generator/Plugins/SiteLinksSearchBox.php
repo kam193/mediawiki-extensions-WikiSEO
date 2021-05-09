@@ -94,7 +94,7 @@ class SiteLinksSearchBox extends AbstractBaseGenerator implements GeneratorInter
 	}
 
 	private function getTypeMetadata(): string {
-		return $this->metadata['type'] ?? 'article';
+		return $this->metadata['type'] ?? 'WebSite';
 	}
 
 	private function getSearchActionMetadata(): array {
