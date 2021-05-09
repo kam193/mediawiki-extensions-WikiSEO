@@ -84,7 +84,7 @@ class SiteLinksSearchBox extends AbstractBaseGenerator implements GeneratorInter
 		$meta['potentialAction'] = $this->getSearchActionMetadata();
 
 		$this->outputPage->addHeadItem(
-			'jsonld-metadata',
+			'jsonld-metadata-search-action',
 			sprintf( $template, json_encode( $meta ) )
 		);
 	}

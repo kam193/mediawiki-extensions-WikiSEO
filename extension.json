@@ -58,11 +58,7 @@
 		},
 		"MetadataGenerators": {
 			"description": "Array with metadata generators. Valid values are OpenGraph, Twitter, SchemaOrg, Citation",
-			"value": [
-				"OpenGraph",
-				"Twitter",
-				"SchemaOrg"
-			]
+			"value": []
 		},
 		"WikiSeoDefaultImage": {
 			"description": "Default image. Local image, if not set $wgLogo will be used.",
