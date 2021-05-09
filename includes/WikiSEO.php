@@ -179,7 +179,7 @@ class WikiSEO {
 	private function setMetadataGenerators(): void {
 		try {
 			$generators =
-				MediaWikiServices::getInstance()->getMainConfig()->get( 'MetadataGenerators' );
+			MediaWikiServices::getInstance()->getConfigFactory()->makeConfig( 'WikiSEO' )->get( 'MetadataGenerators' );
 		} catch ( ConfigException $e ) {
 			wfLogWarning(
 				sprintf(

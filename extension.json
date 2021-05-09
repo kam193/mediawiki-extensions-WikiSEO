@@ -59,7 +59,9 @@
 		"MetadataGenerators": {
 			"description": "Array with metadata generators. Valid values are OpenGraph, Twitter, SchemaOrg, Citation",
 			"value": [
-				"SiteLinksSearchBox"
+				"OpenGraph",
+				"Twitter",
+				"SchemaOrg"
 			]
 		},
 		"WikiSeoDefaultImage": {
@@ -125,6 +127,9 @@
 		"RevisionDataUpdates": "PageHooks",
 		"InfoAction": "InfoActionHook",
 		"ScribuntoExternalLibraries": "MediaWiki\\Extension\\WikiSEO\\Hooks\\ScribuntoHooks::onScribuntoExternalLibraries"
+	},
+	"ConfigRegistry": {
+		"WikiSEO": "GlobalVarConfig::newInstance"
 	},
 	"manifest_version": 2
 }
